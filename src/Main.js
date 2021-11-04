@@ -1,13 +1,18 @@
 import React from 'react';
 import { Web3ReactProvider } from '@web3-react/core';
-import { Web3Provider } from '@ethersproject/providers';
+import { ethers } from 'ethers';
 
 import RenderRoutes from './components/RenderRoutes';
 import Layout from './layout/Layout';
 import routes from './routes';
 import './styles/Main.scss';
 
-const getLibrary = (provider) => new Web3Provider(provider);
+const getLibrary = (provider) => {
+  const library = new ethers.providers.Web3Provider(provider);
+  library.pollingInterval = 12000;
+
+  return library;
+};
 
 const Main = () => (
   <Web3ReactProvider getLibrary={getLibrary}>
