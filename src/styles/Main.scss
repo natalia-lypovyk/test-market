@@ -1,4 +1,5 @@
 @import "./utilities/variables";
+@import "./utilities/reset";
 @import "./utilities/base";
 
 @import "./fonts/fonts";
@@ -7,3 +8,6 @@
 
 @import "./pages/home";
 @import "./pages/send-tokens";
+
+@import "./components/buttons";
+@import "./components/form";
