@@ -1,24 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
-import { formatEther } from '@ethersproject/units';
 
-import useBalance from '../../utils/useBalance';
 import getErrorMessage from '../../utils/getErrorMessage';
+import Balance from './components/Balance';
 
 import injected from '../../connector';
 
 const Home = () => {
   const { activate, deactivate, active, library, error } = useWeb3React();
-  const balance = useBalance();
 
   return (
     <>
       <h1>Home</h1>
 
-      {balance && (
-        <p>Balance: Ξ {parseFloat(formatEther(balance)).toPrecision(4)}</p>
-      )}
+      <Balance />
 
       {error && (
         <>
