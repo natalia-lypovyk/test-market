@@ -3,13 +3,20 @@ import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 
 import injected from '../../connector';
+import getErrorMessage from '../../utils';
 
 const Home = () => {
-  const { activate, deactivate, active, library } = useWeb3React();
+  const { activate, deactivate, active, library, error } = useWeb3React();
 
   return (
     <>
       <h1>Home</h1>
+
+      {error && (
+        <>
+          <p>{getErrorMessage(error)}</p>
+        </>
+      )}
 
       {active ? (
         <>
