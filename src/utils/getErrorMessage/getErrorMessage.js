@@ -24,7 +24,10 @@ const getErrorMessage = (error) => {
     return 'Please authorize this website to access your Ethereum account.';
   }
 
-  console.warn('Unrecognized error', error);
+  console.error(
+    'Unrecognized error. Check the console for more details',
+    error,
+  );
   return error.message;
 };
 
