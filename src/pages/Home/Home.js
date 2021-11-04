@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 
 import injected from '../../connector';
@@ -21,6 +22,8 @@ const Home = () => {
           >
             Disconnect
           </button>
+
+          <Link to="/send-tokens">Send tokens</Link>
         </>
       ) : (
         <button
