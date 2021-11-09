@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+
 import useTransferEther from '../../../../utils/useTransferEther';
 
 const Form = () => {
@@ -7,8 +8,15 @@ const Form = () => {
 
   const { transferEther } = useTransferEther();
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    inputAddressRef.current.value = '';
+    inputAmountRef.current.value = '';
+  };
+
   return (
-    <form onSubmit={(e) => e.preventDefault()} className="form">
+    <form onSubmit={handleSubmit} className="form">
       <label className="form__label">
         Amount of ETH you want to send
         <input
