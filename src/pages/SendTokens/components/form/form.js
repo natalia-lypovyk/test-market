@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import useTransferEther from '../../../../utils/useTransferEther';
+import { useTransferEther } from '../../../../utils';
 
 const Form = () => {
   const inputAmountRef = useRef();

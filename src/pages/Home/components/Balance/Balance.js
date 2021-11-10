@@ -1,7 +1,6 @@
 import React from 'react';
-import { formatEther } from '@ethersproject/units';
 
-import useBalance from '../../../../utils/useBalance';
+import { useBalance, formatEtherBalance } from '../../../../utils';
 
 const Balance = () => {
   const balance = useBalance();
@@ -14,9 +13,7 @@ const Balance = () => {
         💰
       </span>
 
-      <span>
-        {balance ? `Ξ${parseFloat(formatEther(balance)).toPrecision(4)}` : ''}
-      </span>
+      <span>{balance ? `Ξ${formatEtherBalance(balance)}` : ''}</span>
     </div>
   ) : (
     <></>

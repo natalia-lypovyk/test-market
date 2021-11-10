@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 
-import getErrorMessage from '../../utils/getErrorMessage';
+import { getErrorMessage } from '../../utils';
 import Nav from '../../components/nav';
 import Balance from './components/Balance';
 import injected from '../../connector';

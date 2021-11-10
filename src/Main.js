@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useWeb3React, Web3ReactProvider } from '@web3-react/core';
 
-import useEagerConnect from './utils/useEagerConnect';
-import useInactiveListener from './utils/useInactiveListener';
+import { useInactiveListener, useEagerConnect } from './utils';
 import RenderRoutes from './components/RenderRoutes';
 import getLibrary from './getLibrary';
 import Layout from './layout/Layout';
