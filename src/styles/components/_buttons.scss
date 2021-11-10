@@ -10,6 +10,7 @@
   color: $white;
 
   transition: all 0.2s;
+  letter-spacing: 1px;
 
   &:hover {
     background-color: rgb(65, 141, 217);
@@ -24,4 +25,8 @@
     border-color: rgb(24, 104, 183);
     background-color: rgb(24, 104, 183);
   }
+}
+
+.connect-button {
+  margin-top: 50px;
 }
