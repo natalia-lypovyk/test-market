@@ -1,0 +1,47 @@
+.nav {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 20px 10%;
+
+  &__item {
+    position: relative;
+
+    font-size: 1.25em;
+
+    &.active {
+      color: $accent-s;
+    }
+
+    &.active::after {
+      width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+
+      display: block;
+
+      width: 0;
+      height: 2px;
+
+      content: "";
+
+      background-color: $accent-s;
+
+      transition: all 0.3s;
+    }
+
+    &:hover::after {
+      // background-color: $accent-s;
+      width: 100%;
+    }
+
+    &:first-of-type {
+      margin-right: 30px;
+    }
+  }
+}

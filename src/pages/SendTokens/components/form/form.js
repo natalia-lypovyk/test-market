@@ -40,7 +40,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="form__button"
+        className="form__button button"
         onClick={() =>
           transferEther(
             inputAddressRef.current.value,

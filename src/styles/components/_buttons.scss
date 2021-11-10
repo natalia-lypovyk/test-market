@@ -1,14 +1,13 @@
-.connect-button {
+.button {
   padding: 10px 20px;
-
-  border: 2px solid rgb(32, 129, 226);
+  border: 2px solid $accent;
   border-radius: 10px;
 
   font-weight: bold;
   text-transform: uppercase;
 
+  background-color: $accent;
   color: $white;
-  background-color: rgb(32, 129, 226);
 
   transition: all 0.2s;
 

@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
+import Nav from '../../components/nav';
 import Form from './components/form';
 
 const SendTokens = () => (
   <>
-    <Link to="/" className="link">
-      Go Back to Home Page
-    </Link>
+    <Nav />
 
     <Form />
   </>

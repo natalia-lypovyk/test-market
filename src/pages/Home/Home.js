@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 
 import getErrorMessage from '../../utils/getErrorMessage';
+import Nav from '../../components/nav';
 import Balance from './components/Balance';
-
 import injected from '../../connector';
 
 const Home = () => {
@@ -12,7 +11,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Home</h1>
+      <Nav />
 
       <Balance />
 
@@ -27,18 +26,18 @@ const Home = () => {
           <p>Connected with {library.connection.url}</p>
 
           <button
-            className="connect-button"
+            className="connect-button button"
             onClick={() => deactivate()}
             type="button"
           >
             Disconnect
           </button>
 
-          <Link to="/send-tokens">Send tokens</Link>
+          {/* <Link to="/send-tokens">Send tokens</Link> */}
         </>
       ) : (
         <button
-          className="connect-button"
+          className="connect-button button"
           onClick={() => activate(injected)}
           type="button"
         >
