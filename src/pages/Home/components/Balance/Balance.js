@@ -6,7 +6,7 @@ import useBalance from '../../../../utils/useBalance';
 const Balance = () => {
   const balance = useBalance();
 
-  return (
+  return balance ? (
     <div className="balance">
       <span>Balance</span>
 
@@ -14,12 +14,12 @@ const Balance = () => {
         💰
       </span>
 
-      <span>{balance === null && 'Error'}</span>
-
       <span>
         {balance ? `Ξ${parseFloat(formatEther(balance)).toPrecision(4)}` : ''}
       </span>
     </div>
+  ) : (
+    <></>
   );
 };
 

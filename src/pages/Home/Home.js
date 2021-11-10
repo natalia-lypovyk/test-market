@@ -13,6 +13,8 @@ const Home = () => {
     <>
       <Nav />
 
+      {active && <p>Connected with {library.connection.url}</p>}
+
       <Balance />
 
       {error && (
@@ -22,19 +24,13 @@ const Home = () => {
       )}
 
       {active ? (
-        <>
-          <p>Connected with {library.connection.url}</p>
-
-          <button
-            className="connect-button button"
-            onClick={() => deactivate()}
-            type="button"
-          >
-            Disconnect
-          </button>
-
-          {/* <Link to="/send-tokens">Send tokens</Link> */}
-        </>
+        <button
+          className="connect-button button"
+          onClick={() => deactivate()}
+          type="button"
+        >
+          Disconnect
+        </button>
       ) : (
         <button
           className="connect-button button"
